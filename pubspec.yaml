@@ -9,6 +9,7 @@ environment:
 workspace:
   - packages/freezed_normal_object
   - packages/my_lints
+  - apps/flutter_launcher_icons_study
 
 dependencies:
   flutter:
