@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter_launcher_icons_study(dev)",
+      "type": "dart",
+      "request": "launch",
+      "program": "apps/flutter_launcher_icons_study/lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define-from-file=dart_define/dev.json"
+      ]
+    },
+    {
+      "name": "flutter_launcher_icons_study(stg)",
+      "type": "dart",
+      "request": "launch",
+      "program": "apps/flutter_launcher_icons_study/lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define-from-file=dart_define/stg.json"
+      ]
+    },
+    {
+      "name": "flutter_launcher_icons_study(prod)",
+      "type": "dart",
+      "request": "launch",
+      "program": "apps/flutter_launcher_icons_study/lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define-from-file=dart_define/prod.json"
+      ]
+    }
+  ]
+}

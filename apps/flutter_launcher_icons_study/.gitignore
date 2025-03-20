@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# env
+**/ios/Flutter/Dart-Defines.xcconfig
+**/android/app/src/main/res/mipmap*/
+**/android/app/src/main/res/drawable*/
+dart_define/*.json
+!dart_define/sample.json

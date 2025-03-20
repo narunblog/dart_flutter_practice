@@ -1,8 +1,31 @@
+import java.util.Base64
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+}
+
+// dart-define を入れる変数を宣言しています。
+val dartDefines = mutableMapOf<String, String>()
+if (project.hasProperty("dart-defines")) {
+    val dartDefinesProperty = project.property("dart-defines") as String
+    dartDefinesProperty.split(",").forEach { entry ->
+        val pair = String(Base64.getDecoder().decode(entry)).split("=")
+        if (pair.size == 2) {
+            dartDefines[pair[0]] = pair[1]
+        }
+    }
+}
+
+tasks.register<Copy>("copySources") {
+    from("src/${dartDefines["flavor"]}/res")
+    into("src/main/res")
+}
+
+tasks.whenTaskAdded {
+    dependsOn("copySources")
 }
 
 android {
