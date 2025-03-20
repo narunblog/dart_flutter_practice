@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "default_app",
+      "type": "dart",
+      "request": "launch",
+      "program": "apps/default_app/lib/main.dart",
+      "flutterMode": "debug",
+    },
+    {
       "name": "flutter_launcher_icons_study(dev)",
       "type": "dart",
       "request": "launch",
