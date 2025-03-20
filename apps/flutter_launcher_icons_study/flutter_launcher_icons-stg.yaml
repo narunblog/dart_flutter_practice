@@ -1,0 +1,79 @@
+# flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  # image_path: The location of the icon image file which you want to use as the app launcher icon.
+  image_path: "assets/launcher_icon/stg/icon_ios.png"
+
+  # android:
+  # - true: Override the default existing Flutter launcher icon for the platform specified
+  # - false: Ignore making launcher icons for this platform
+  # - icon/path/here.png: This will generate a new launcher icons for the platform with the name you specify, without removing the old default existing Flutter launcher icon.
+  android: true
+
+  # image_path: The location of the icon image file which you want to use as the app launcher icon
+  # グローバルのimage_pathと同じなので、ここでは指定しない
+  # image_path のアイコン画像はiOSとAndroid8未満に適用される。
+  # https://zenn.dev/susatthi/articles/20220401-060335-flutter-launcher-icons#pubspec.yaml%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B
+  # image_path: "assets/icon/icon.png"
+
+  # image_path_android: The location of the icon image file specific for Android platform (optional - if not defined then the image_path is used)
+  # image_path_android: "assets/launcher_icon/dev/android_foreground.svg"
+
+  # min_sdk_android: Specify android min sdk value The next two attributes are only used when generating Android launcher icon
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+  # adaptive_icon_background: The color (E.g. "#ffffff") or image asset (E.g. "assets/images/christmas-background.png") which will be used to fill out the background of the adaptive icon.
+  # - "#ffffff"
+  # - "assets/images/christmas-background.png"
+  adaptive_icon_background: "assets/launcher_icon/stg/android_background.png"
+
+  # adaptive_icon_foreground: The image asset which will be used for the icon foreground of the adaptive icon Note: Adaptive Icons will only be generated when both adaptive_icon_background and adaptive_icon_foreground are specified. (the image_path is not automatically taken as foreground)
+  adaptive_icon_foreground: "assets/launcher_icon/stg/android_foreground.png"
+
+  # adaptive_icon_foreground_inset: This is used to add padding to the icon when applying an adaptive icon. The default value is 16.
+  # adaptive_icon_foreground_inset: 16
+
+  # adaptive_icon_monochrome: The image asset which will be used for the icon foreground of the Android 13+ themed icon. For more information see Android Adaptive Icons
+  # https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming
+  # adaptive_icon_monochrome: "assets/icon/monochrome.png"
+
+
+  # ios
+  # - true: Override the default existing Flutter launcher icon for the platform specified
+  # - false: Ignore making launcher icons for this platform
+  # - icon/path/here.png: This will generate a new launcher icons for the platform with the name you specify, without removing the old default existing Flutter launcher icon.
+  ios: true
+
+  # image_path_ios: The location of the icon image file specific for iOS platform (optional - if not defined then the image_path is used)
+  # image_path_ios: "assets/launcher_icon/dev/icon_ios.svg"
+
+  # remove_alpha_ios: Removes alpha channel for IOS icons
+  remove_alpha_ios: true
+
+  # image_path_ios_dark_transparent: The location of the dark mode icon image file specific for iOS 18+ platform. Note: Apple recommends this icon to be transparent. For more information see Apple Human Interface Guidelines for App Icons
+  # https://developer.apple.com/design/human-interface-guidelines/app-icons#iOS-iPadOS
+  # image_path_ios_dark_transparent: "assets/icon/icon_dark.png"
+
+  # image_path_ios_tinted_grayscale: The location of the tinted mode icon image file specific for iOS 18+ platform. Note: This icon should be an grayscale image. Use
+  # image_path_ios_tinted_grayscale: "assets/icon/icon_tinted.png"
+
+  # desaturate_tinted_to_grayscale_ios: true to automatically desaturate the image provided here.
+  # desaturate_tinted_to_grayscale_ios: Automatically desaturates tinted mode icon image to grayscale, defaults to false
+  # desaturate_tinted_to_grayscale_ios: true
+
+  # background_color_ios: The color (in the format "#RRGGBB") to be used as the background when removing the alpha channel. It is used only when the remove_alpha_ios property is set to true. (optional - if not defined then #ffffff is used)
+  # background_color_ios: "#ffffff"
+
+  # 以下は使用しないのでコメントアウト
+  # web,windows,macosだとkeyがインデントされているのでkey名が同じでも問題ない
+  # web:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
+  #   background_color: "#hexcode"
+  #   theme_color: "#hexcode"
+  # windows:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
+  #   icon_size: 48 # min:48, max:256, default: 48
+  # macos:
+  #   generate: true
+  #   image_path: "assets/images/icon-1024x1024.png"
