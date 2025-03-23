@@ -1,4 +1,4 @@
-name: default_app
+name: deepcopy_shallowcopy
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -7,12 +7,7 @@ environment:
   sdk: ^3.7.0
   flutter: ">=1.17.0"
 
-workspace:
-  - packages/freezed_normal_object
-  - packages/my_lints
-  - packages/deepcopy_shallowcopy
-  - apps/flutter_launcher_icons_study
-  - apps/default_app
+resolution: workspace
 
 dependencies:
   flutter:
