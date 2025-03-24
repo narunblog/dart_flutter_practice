@@ -37,6 +37,13 @@
       "args": [
         "--dart-define-from-file=dart_define/prod.json"
       ]
-    }
+    },
+    {
+      "name": "watch_listen_read",
+      "type": "dart",
+      "request": "launch",
+      "program": "apps/watch_listen_read/lib/main.dart",
+      "flutterMode": "debug",
+    },
   ]
 }
