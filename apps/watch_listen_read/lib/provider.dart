@@ -19,3 +19,14 @@ class Counter2Notifier extends _$Counter2Notifier {
   void increment() => state++;
   void decrement() => state--;
 }
+
+/// keepAliveの挙動確認用
+@Riverpod(keepAlive: true)
+class Counter3Notifier extends _$Counter3Notifier {
+  @override
+  int build() => 0;
+
+  void increment() => state++;
+
+  void decrement() => state--;
+}

@@ -40,5 +40,24 @@ final counter2NotifierProvider =
     );
 
 typedef _$Counter2Notifier = AutoDisposeNotifier<int>;
+String _$counter3NotifierHash() => r'019bc37a3e945bc48ef7d0b808ee70bdf878a2e0';
+
+/// keepAliveの挙動確認用
+///
+/// Copied from [Counter3Notifier].
+@ProviderFor(Counter3Notifier)
+final counter3NotifierProvider =
+    NotifierProvider<Counter3Notifier, int>.internal(
+      Counter3Notifier.new,
+      name: r'counter3NotifierProvider',
+      debugGetCreateSourceHash:
+          const bool.fromEnvironment('dart.vm.product')
+              ? null
+              : _$counter3NotifierHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
+
+typedef _$Counter3Notifier = Notifier<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
