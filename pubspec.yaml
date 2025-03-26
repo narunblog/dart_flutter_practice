@@ -13,6 +13,7 @@ workspace:
   - packages/deepcopy_shallowcopy
   - apps/flutter_launcher_icons_study
   - apps/default_app
+  - apps/watch_listen_read
 
 dependencies:
   flutter:

@@ -18,6 +18,10 @@ void main() {
       final deepCopy =
           original.map((item) => Map<String, dynamic>.from(item)).toList();
 
+      print(original.hashCode);
+      print(shallowCopy.hashCode);
+      print(deepCopy.hashCode);
+
       // シャローコピーのテスト
       expect(identical(original, shallowCopy), isTrue);
       expect(identical(original[0], shallowCopy[0]), isTrue); // 要素は同じ参照
@@ -168,6 +172,9 @@ void main() {
       // シャローコピー（プリミティブ型は値そのものがコピーされる）
       final shallowCopyInt = originalInt;
 
+      print(originalInt.hashCode);
+      print(shallowCopyInt.hashCode);
+
       // シャローコピーのテスト（値が同じなのでtrueとなる）
       expect(identical(originalInt, shallowCopyInt), isTrue);
 
@@ -181,6 +188,9 @@ void main() {
 
       // シャローコピー（プリミティブ型は値そのものがコピーされる）
       final shallowCopyString = originalString;
+
+      print(originalString.hashCode);
+      print(shallowCopyString.hashCode);
 
       // シャローコピーのテスト
       expect(identical(originalString, shallowCopyString), isTrue);
